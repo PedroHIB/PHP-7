@@ -16,6 +16,6 @@ try {
     echo 'Divisão por zero<br>';
 }
 
-echo intdiv(8, 2) . '<br>';
-echo \intdiv(8, 2) . '<br>';
+echo intdiv(8, 2) . '<br>';  //personalizado
+echo \intdiv(8, 2) . '<br>'; //original
 echo \intdiv(8, 3) . '<br>';
