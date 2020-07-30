@@ -1,13 +1,15 @@
 <div class="titulo">Upload</div>
 
 <?php 
-print_r($_FILES);
+print_r($_FILES); //mostrar o array vazio
 
 if($_FILES && $_FILES['arquivo']) {
-    $pastaUpload = '/Users/leonardomleitao/Desktop/';
+    $pastaUpload = '/home/pedrohib/Área de Trabalho/';
     $nomeArquivo = $_FILES['arquivo']['name'];
     $arquivo = $pastaUpload . $nomeArquivo;
     $tmp = $_FILES['arquivo']['tmp_name'];
+
+    echo "<br>";
 
     if (move_uploaded_file($tmp, $arquivo)) {
         echo "<br>Arquivo válido e enviado com sucesso.";
@@ -18,7 +20,7 @@ if($_FILES && $_FILES['arquivo']) {
 ?>
 
 <form action="#" method="post"
-    enctype="multipart/form-data">
+    enctype="multipart/form-data"> <!--necessario para enviar arquivos por upload-->
     <input name="arquivo" type="file">
     <button>Enviar</button>
 </form>
