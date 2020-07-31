@@ -1,7 +1,7 @@
 <div class="titulo">Upload</div>
 
 <?php 
-print_r($_FILES); //mostrar o array vazio
+print_r($_FILES); //mostrar os dados do array
 
 if($_FILES && $_FILES['arquivo']) {
     $pastaUpload = '/home/pedrohib/Área de Trabalho/';

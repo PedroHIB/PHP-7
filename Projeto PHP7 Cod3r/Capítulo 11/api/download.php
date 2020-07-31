@@ -5,7 +5,7 @@ session_start();
 
 $arquivos = $_SESSION['arquivos'] ?? [];
 
-$pastaUpload = __DIR__ . '/../files/';
+$pastaUpload = '/home/pedrohib/Área de Trabalho/';
 $nomeArquivo = $_FILES['arquivo']['name'];
 $arquivo = $pastaUpload . $nomeArquivo;
 $tmp = $_FILES['arquivo']['tmp_name'];
